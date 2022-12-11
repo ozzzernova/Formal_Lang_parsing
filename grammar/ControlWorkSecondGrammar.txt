@@ -1,0 +1,13 @@
+S T U
+a b c
+>
+e
+S
+S>aTa
+S>b
+T>bSab
+T>b
+S>Ucb
+S>c
+U>aS
+U>c
