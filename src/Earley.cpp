@@ -31,6 +31,7 @@ bool Earley::IsBelongToGrammar(const std::string &word) {
 }
 
 bool Earley::EarleyAlgorithm(const std::string& input_word) {
+  situation_layers_.clear();
   situation_layers_.resize(input_word.size() + 1);
   std::string begin("0");
   begin[0] = start_;
