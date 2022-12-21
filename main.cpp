@@ -20,7 +20,7 @@ int main() {
   }
   file_desc.close();
   Earley earley(nonterminal, terminal, separator, epsilon, start, rules);
-  std::cout << "Enter your word to check if it belongs to the grammar\nWhen you want to finish, enter \"exit\"\n";
+  std::cout << "Enter your word to check if it belongs to the grammar\nWhen you want to finish, enter \"!exit!\"\n";
   std::cin >> word;
   while (word != "!exit!") {
     std::cout << word << (earley.IsBelongToGrammar(word) ? " belongs" : " does not belong") << " to the grammar\n";
