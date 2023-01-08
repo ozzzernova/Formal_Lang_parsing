@@ -21,8 +21,10 @@ class Earley : protected Grammar {
   struct SituationComparator;
   std::vector<std::set<Situation, SituationComparator>> situation_layers_;
   void Scan(size_t position, char current_letter);
-  void Complete(size_t position);
-  void Predict(size_t position);
+  void Complete(size_t position, std::set<Situation, SituationComparator> &new_set,
+                std::set<Situation, SituationComparator> &old_set);
+  void Predict(size_t position, std::set<Situation, SituationComparator>& new_set,
+               std::set<Situation, SituationComparator>& old_set);
   bool EarleyAlgorithm(const std::string& input_word);
 };
 
